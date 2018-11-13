@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    
+    <div class="jumbotron">
+            <h1 style="text-align: center;" class="display-4">Hello XXXXXX! Thanks for signing in</h1>
+            <hr class="my-4">
+            <a onclick="signUserOut()" class="btn btn-primary btn-lg"  href="#" role="button">Sign Out</a>
+    </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+    
+    var config = {
+      apiKey: "AIzaSyAbrWN8ou8jioinri2U54zhC9WykLI2-B0",
+      authDomain: "fir-login-practice-f64ae.firebaseapp.com",
+      databaseURL: "https://fir-login-practice-f64ae.firebaseio.com",
+      projectId: "fir-login-practice-f64ae",
+      storageBucket: "fir-login-practice-f64ae.appspot.com",
+      messagingSenderId: "414067828537"
+    };
+    firebase.initializeApp(config);
+    function signUserOut () {
+        firebase.auth().signOut()
+        goToHomePage()
+    }//signUserOut
+    
+    function goToHomePage () {
+        window.location.href = 'index.html'
+    }//goToHomePage
+    
+</script>
+    
+
+</body>
+</html>
